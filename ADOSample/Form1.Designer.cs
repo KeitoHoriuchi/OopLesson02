@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label dateLabel;
             System.Windows.Forms.Label aythorLabel;
             System.Windows.Forms.Label memoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.infosys202012DataSet = new ADOSample.infosys202012DataSet();
             this.memoTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.memoTableTableAdapter = new ADOSample.infosys202012DataSetTableAdapters.memoTableTableAdapter();
             this.tableAdapterManager = new ADOSample.infosys202012DataSetTableAdapters.TableAdapterManager();
             this.memoTableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.memoTableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.memoTableDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,7 @@
             this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.aythorTextBox = new System.Windows.Forms.TextBox();
             this.memoTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             iDLabel = new System.Windows.Forms.Label();
             dateLabel = new System.Windows.Forms.Label();
             aythorLabel = new System.Windows.Forms.Label();
@@ -70,6 +71,42 @@
             this.memoTableBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoTableDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Location = new System.Drawing.Point(33, 267);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(18, 12);
+            iDLabel.TabIndex = 2;
+            iDLabel.Text = "ID:";
+            // 
+            // dateLabel
+            // 
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(33, 293);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(31, 12);
+            dateLabel.TabIndex = 4;
+            dateLabel.Text = "Date:";
+            // 
+            // aythorLabel
+            // 
+            aythorLabel.AutoSize = true;
+            aythorLabel.Location = new System.Drawing.Point(33, 317);
+            aythorLabel.Name = "aythorLabel";
+            aythorLabel.Size = new System.Drawing.Size(41, 12);
+            aythorLabel.TabIndex = 6;
+            aythorLabel.Text = "Aythor:";
+            // 
+            // memoLabel
+            // 
+            memoLabel.AutoSize = true;
+            memoLabel.Location = new System.Drawing.Point(33, 342);
+            memoLabel.Name = "memoLabel";
+            memoLabel.Size = new System.Drawing.Size(37, 12);
+            memoLabel.TabIndex = 8;
+            memoLabel.Text = "Memo:";
             // 
             // infosys202012DataSet
             // 
@@ -121,6 +158,31 @@
             this.memoTableBindingNavigator.TabIndex = 0;
             this.memoTableBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "新規追加";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorCountItem.Text = "/ {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "削除";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -154,16 +216,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "現在の場所";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorCountItem.Text = "/ {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -186,26 +241,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "新規追加";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // memoTableBindingNavigatorSaveItem
             // 
@@ -256,15 +293,6 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Memo";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(33, 267);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(18, 12);
-            iDLabel.TabIndex = 2;
-            iDLabel.Text = "ID:";
-            // 
             // iDTextBox
             // 
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memoTableBindingSource, "ID", true));
@@ -272,15 +300,6 @@
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.Size = new System.Drawing.Size(200, 19);
             this.iDTextBox.TabIndex = 3;
-            // 
-            // dateLabel
-            // 
-            dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(33, 293);
-            dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(31, 12);
-            dateLabel.TabIndex = 4;
-            dateLabel.Text = "Date:";
             // 
             // dateDateTimePicker
             // 
@@ -290,15 +309,6 @@
             this.dateDateTimePicker.Size = new System.Drawing.Size(200, 19);
             this.dateDateTimePicker.TabIndex = 5;
             // 
-            // aythorLabel
-            // 
-            aythorLabel.AutoSize = true;
-            aythorLabel.Location = new System.Drawing.Point(33, 317);
-            aythorLabel.Name = "aythorLabel";
-            aythorLabel.Size = new System.Drawing.Size(41, 12);
-            aythorLabel.TabIndex = 6;
-            aythorLabel.Text = "Aythor:";
-            // 
             // aythorTextBox
             // 
             this.aythorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memoTableBindingSource, "Aythor", true));
@@ -306,15 +316,6 @@
             this.aythorTextBox.Name = "aythorTextBox";
             this.aythorTextBox.Size = new System.Drawing.Size(200, 19);
             this.aythorTextBox.TabIndex = 7;
-            // 
-            // memoLabel
-            // 
-            memoLabel.AutoSize = true;
-            memoLabel.Location = new System.Drawing.Point(33, 342);
-            memoLabel.Name = "memoLabel";
-            memoLabel.Size = new System.Drawing.Size(37, 12);
-            memoLabel.TabIndex = 8;
-            memoLabel.Text = "Memo:";
             // 
             // memoTextBox
             // 
@@ -324,11 +325,21 @@
             this.memoTextBox.Size = new System.Drawing.Size(200, 19);
             this.memoTextBox.TabIndex = 9;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(80, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 57);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "接続";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(dateLabel);
@@ -381,6 +392,7 @@
         private System.Windows.Forms.DateTimePicker dateDateTimePicker;
         private System.Windows.Forms.TextBox aythorTextBox;
         private System.Windows.Forms.TextBox memoTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -31,5 +31,10 @@ namespace ADOSample
             this.memoTableTableAdapter.Fill(this.infosys202012DataSet.memoTable);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.memoTableTableAdapter.Fill(this.infosys202012DataSet.memoTable);
+        }
     }
 }
